@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.steveny.mapper.UserMapper">
+
+    <insert id="register">
+        insert into users(name, psw)
+            value (#{name}, #{psw});
+    </insert>
+
+    <select id="loginUser" resultType="com.steveny.pojo.User">
+        select *
+        from users
+        where name = #{name} and psw = #{psw};
+    </select>
+
+    <select id="selectUserByUuid" resultType="com.steveny.pojo.User">
+        select *
+        from users
+        where uuid = #{uuid};
+    </select>
+
+    <select id="selectUserByName" resultType="com.steveny.pojo.User">
+        select *
+        from users
+        where name = #{name};
+    </select>
+
+</mapper>

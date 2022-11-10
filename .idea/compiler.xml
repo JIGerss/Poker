@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Poker_Dao" />
+        <module name="Poker_Pojo" />
+        <module name="Poker_Service" />
+        <module name="Poker_Controller" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
