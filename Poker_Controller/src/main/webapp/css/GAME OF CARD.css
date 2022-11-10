@@ -1,0 +1,131 @@
+
+/* .card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+} */
+
+.card::-webkit-scrollbar{
+    display: none;
+}
+.login_box{
+    background: url("../img/1.png")  no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 100px 0;
+    /* border-radius: 20px; */
+}
+.login_box > div{
+    position: relative;
+    width: 400px;
+    height: 50px;
+    margin: 50px auto;
+}
+.logo img{
+    margin-top: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    width: 110px;
+    height: 120px;
+}
+
+.login_box .web_name img{
+   position: relative;
+   margin-top: 45px;
+    width: 434px;
+    height: 48px;
+    left: 2px;
+    top: 55px;
+    font-size: 40px;
+}
+
+.login_box .web_introduce p{
+    position: relative;
+    margin-top: 50px;
+    top: 65px;
+    left: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.login_box .web_name{
+    position: relative;
+    /* margin-top: 40px; */
+    width: 423px;
+    height: 36px;
+}
+
+.login_box > div > form .username,
+.login_box > div > form .password{
+    position: relative;
+    width: 250px;
+    height: 35px;
+    border: none;
+    color: #333;
+    outline: none;
+    border-bottom: 1px solid #12B7F5;
+    border-radius: 20px;
+    
+}
+
+.login_box .User{
+    position: relative;
+    margin-top: 50px;
+    top: 25px;
+    left: 40px;
+}
+
+.login_box .Password{
+    position: relative;
+    margin-top: -40px;
+    top: 50px;
+    left: 40px;
+}
+
+.login_box .remember{
+    position: relative;
+    margin-top: 30px;
+    top: 30px;
+    left: 145px;
+    z-index: 99;
+}
+
+.login_box .remember span{
+    color: antiquewhite;
+}
+.login_box > div > form .button{
+    position: relative;
+    width: 354px;
+    height: 53px;
+    text-align: center;
+    background-color: #9DDCFF;
+    margin-top: 60px;
+    top: -40px;
+    left: -15px;
+    border-radius: 20px;
+}
+
+.login_box .log_but{
+    position: relative;
+    top: -40px;
+    left: 30px;
+
+}
+.login_box > div > form .button:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.login_box .register{
+    position: relative;
+    top: -50px;
+    left: -15px;
+}
