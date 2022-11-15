@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Poker_Dao" />
-        <module name="Poker_Pojo" />
-        <module name="Poker_Service" />
         <module name="Poker_Controller" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Poker_Pojo" target="8" />
+      <module name="Poker_Pojo_Dao_Service" target="8" />
+      <module name="Poker_Service" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

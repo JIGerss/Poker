@@ -2,7 +2,8 @@ package com.steveny.web.servlet;
 
 import com.steveny.pojo.User;
 import com.steveny.service.UserService;
-import com.steveny.service.impl.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -15,7 +16,8 @@ import java.util.List;
 
 @WebServlet("/user/*")
 public class UserServlet extends BaseServlet {
-    private final UserService userService = new UserServiceImpl();
+
+    private UserService userService;
 
     /**
      * 用户登录
@@ -113,5 +115,9 @@ public class UserServlet extends BaseServlet {
             response.setStatus(556);
             writer.write("Verify code is incorrect!");
         }
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 }
