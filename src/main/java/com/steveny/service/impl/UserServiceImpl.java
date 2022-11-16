@@ -4,7 +4,6 @@ import com.steveny.mapper.UserMapper;
 import com.steveny.pojo.User;
 import com.steveny.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,8 +1,8 @@
 package com.steveny.config;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import com.alibaba.druid.pool.DruidDataSource;
 
 import javax.sql.DataSource;
 

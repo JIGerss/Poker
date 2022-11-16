@@ -1,5 +1,2 @@
 # 项目排除路径
-/Poker_Controller/target/
-/Poker_Dao/target/
-/Poker_Pojo/target/
-/Poker_Service/target/
+/target/

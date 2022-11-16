@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
     <file type="web" url="file://$PROJECT_DIR$/Poker_Controller" />
   </component>
   <component name="MavenProjectsManager">
@@ -12,6 +13,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Poker_Controller/pom.xml" />
         <option value="$PROJECT_DIR$/Poker_Pojo/pom.xml" />
         <option value="$PROJECT_DIR$/Poker_Pojo_Dao_Service/pom.xml" />
         <option value="$PROJECT_DIR$/Poker_Service/pom.xml" />
