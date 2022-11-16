@@ -3,7 +3,6 @@ package com.steveny.web.servlet;
 import com.steveny.config.SpringConfig;
 import com.steveny.pojo.User;
 import com.steveny.service.UserService;
-import com.steveny.service.impl.UserServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -29,6 +28,7 @@ public class UserServlet extends BaseServlet {
 
     /**
      * 用户登录
+     *
      * @param request
      * @param response
      * @throws IOException
@@ -42,7 +42,7 @@ public class UserServlet extends BaseServlet {
         String remember = request.getParameter("remember");
 
         List<User> userList = userService.loginUser(username, password);
-        System.out.println(username + password + remember);
+        System.out.println(username + " " + password + " " + remember);
 
         if (!userList.isEmpty()) {
 
@@ -50,7 +50,7 @@ public class UserServlet extends BaseServlet {
 
                 //添加用户名Cookie
                 Cookie cookie = new Cookie("username", username);
-                cookie.setMaxAge(60);
+                cookie.setMaxAge(600);
                 response.addCookie(cookie);
             } else {
 
@@ -81,6 +81,7 @@ public class UserServlet extends BaseServlet {
 
     /**
      * 用户注册
+     *
      * @param request
      * @param response
      * @throws IOException

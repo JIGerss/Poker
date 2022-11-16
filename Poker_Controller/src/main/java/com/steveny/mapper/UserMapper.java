@@ -15,9 +15,9 @@ public interface UserMapper {
     @Select("select * from users where name = #{name} and psw = #{psw}")
     List<User> loginUser(@Param("name") String name, @Param("psw") String psw);
 
-    @Select("select * from users where uuid = #{uuid}")
+    @Select("select * from users where uuid = #{name}")
     List<User> selectUserByName(@Param("name") String name);
 
-    @Select("select * from users where name = #{name}")
+    @Select("select * from users where name = #{uuid}")
     User selectUserByUuid(@Param("uuid") int uuid);
 }
