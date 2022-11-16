@@ -1,9 +1,11 @@
 package com.steveny.web.servlet;
 
+import com.steveny.config.SpringConfig;
 import com.steveny.pojo.User;
 import com.steveny.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import com.steveny.service.impl.UserServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -18,6 +20,12 @@ import java.util.List;
 public class UserServlet extends BaseServlet {
 
     private UserService userService;
+
+    @Override
+    public void init() {
+        ApplicationContext ac = new AnnotationConfigApplicationContext(SpringConfig.class);
+        userService = ac.getBean(UserService.class);
+    }
 
     /**
      * 用户登录

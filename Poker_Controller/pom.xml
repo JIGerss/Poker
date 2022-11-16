@@ -19,11 +19,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.steveny</groupId>
-            <artifactId>Poker_Pojo_Dao_Service</artifactId>
-            <version>1.0.0</version>
-        </dependency>
 
         <!--spring framework-->
         <dependency>
@@ -37,6 +32,18 @@
             <artifactId>javax.servlet-api</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+
         <!--IOUtils-->
         <dependency>
             <groupId>commons-io</groupId>

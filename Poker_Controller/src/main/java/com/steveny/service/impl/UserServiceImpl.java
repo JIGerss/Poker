@@ -3,9 +3,8 @@ package com.steveny.service.impl;
 import com.steveny.mapper.UserMapper;
 import com.steveny.pojo.User;
 import com.steveny.service.UserService;
-import org.apache.ibatis.session.SqlSession;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,57 +12,23 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private SqlSessionFactoryBean sqlSessionFactoryBean;
+    @Autowired
+    private UserMapper userMapper;
 
     public List<User> loginUser(String name, String psw) {
-        SqlSession sqlSession = null;
-        try {
-            sqlSession = sqlSessionFactoryBean.getObject().openSession();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        List<User> userList = userMapper.loginUser(name, psw);
-        sqlSession.close();
-        return userList;
+        return userMapper.loginUser(name, psw);
     }
 
     public User selectUserByUuid(int uuid) {
-        SqlSession sqlSession = null;
-        try {
-            sqlSession = sqlSessionFactoryBean.getObject().openSession();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        User user = userMapper.selectUserByUuid(uuid);
-        sqlSession.close();
-        return user;
+        return userMapper.selectUserByUuid(uuid);
     }
 
     public List<User> selectUserByName(String name) {
-        SqlSession sqlSession = null;
-        try {
-            sqlSession = sqlSessionFactoryBean.getObject().openSession();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        List<User> users = userMapper.selectUserByName(name);
-        sqlSession.close();
-        return users;
+        return userMapper.selectUserByName(name);
     }
 
     public void addUser(String name, String psw) {
-        SqlSession sqlSession = null;
-        try {
-            sqlSession = sqlSessionFactoryBean.getObject().openSession();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         userMapper.register(name, psw);
-        sqlSession.commit();
-        sqlSession.close();
     }
+
 }

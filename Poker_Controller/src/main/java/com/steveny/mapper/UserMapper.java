@@ -9,15 +9,15 @@ import java.util.List;
 
 public interface UserMapper {
 
-    @Insert("insert into users(name, psw) value (#{name}, #{psw});")
+    @Insert("insert into users(name, psw) value (#{name}, #{psw})")
     void register(@Param("name") String name, @Param("psw") String psw);
 
-    @Select("select * from users where name = #{name} and psw = #{psw};")
+    @Select("select * from users where name = #{name} and psw = #{psw}")
     List<User> loginUser(@Param("name") String name, @Param("psw") String psw);
 
-    @Select("select * from users where uuid = #{uuid};")
+    @Select("select * from users where uuid = #{uuid}")
     List<User> selectUserByName(@Param("name") String name);
 
-    @Select("select * from users where name = #{name};")
+    @Select("select * from users where name = #{name}")
     User selectUserByUuid(@Param("uuid") int uuid);
 }

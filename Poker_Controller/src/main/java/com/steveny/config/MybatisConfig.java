@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 public class MybatisConfig {
 
     @Bean
-    public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource){
+    public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource) {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setTypeAliasesPackage("com.steveny.pojo");
         factoryBean.setDataSource(dataSource);
@@ -17,7 +17,7 @@ public class MybatisConfig {
     }
 
     @Bean
-    public MapperScannerConfigurer mapperScannerConfigurer(){
+    public MapperScannerConfigurer mapperScannerConfigurer() {
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
         msc.setBasePackage("com.steveny.mapper");
         return msc;
